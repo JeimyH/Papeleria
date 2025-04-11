@@ -71,4 +71,14 @@ public class VentaController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST); // 400 Bad Request
         }
     }
+
+    @GetMapping("/empleado/{id_empleado}")
+    public List<Venta> getVentasByEmpleado(@PathVariable int idEmpleado) {
+        return ventaService.getVentasByEmpleado(idEmpleado);
+    }
+
+    @GetMapping("/empleado/{id_empleado}/cliente/{id_cliente}")
+    public List<Venta> getVentasByEmpleadoAndCliente(@PathVariable int id_empleado, @PathVariable int id_cliente) {
+        return ventaService.getVentasByEmpleadoAndCliente(id_empleado, id_cliente);
+    }
 }

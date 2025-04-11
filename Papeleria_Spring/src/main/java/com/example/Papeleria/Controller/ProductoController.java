@@ -71,4 +71,9 @@ public class ProductoController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST); // 400 Bad Request
         }
     }
+
+    @GetMapping("/proveedor/{id_proveedor}")
+    public List<Producto> getProductosByProveedor(@PathVariable int id_proveedor) {
+        return productoService.getProductosByProveedor(id_proveedor);
+    }
 }

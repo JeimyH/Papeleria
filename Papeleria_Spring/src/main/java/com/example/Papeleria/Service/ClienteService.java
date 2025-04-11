@@ -5,7 +5,6 @@ import com.example.Papeleria.Repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.tree.ExpandVetoException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;

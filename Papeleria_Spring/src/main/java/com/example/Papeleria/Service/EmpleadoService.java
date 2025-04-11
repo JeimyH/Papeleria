@@ -1,6 +1,5 @@
 package com.example.Papeleria.Service;
 
-import com.example.Papeleria.Model.Cliente;
 import com.example.Papeleria.Model.Empleado;
 import com.example.Papeleria.Repository.EmpleadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

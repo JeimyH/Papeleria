@@ -1,6 +1,5 @@
 package com.example.Papeleria.Service;
 
-import com.example.Papeleria.Model.Cliente;
 import com.example.Papeleria.Model.Producto;
 import com.example.Papeleria.Repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,6 +90,10 @@ public class ProductoService {
         } else {
             return null;
         }
+    }
+
+    public List<Producto> getProductosByProveedor(int id_proveedor) {
+        return productoRepository.findProductosByProveedor(id_proveedor);
     }
 
 }

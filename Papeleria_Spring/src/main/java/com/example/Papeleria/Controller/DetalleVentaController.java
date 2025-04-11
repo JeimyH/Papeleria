@@ -71,4 +71,10 @@ public class DetalleVentaController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST); // 400 Bad Request
         }
     }
+
+    @GetMapping("/empleado/{id_empleado}/cliente/{id_cliente}")
+    public List<DetalleVenta> getDetallesByEmpleadoAndCliente(@PathVariable int id_empleado, @PathVariable int id_cliente) {
+        return detalleVentaService.getDetallesByEmpleadoAndCliente(id_empleado, id_cliente);
+    }
+
 }

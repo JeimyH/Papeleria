@@ -1,6 +1,5 @@
 package com.example.Papeleria.Service;
 
-import com.example.Papeleria.Model.Cliente;
 import com.example.Papeleria.Model.DetalleVenta;
 import com.example.Papeleria.Repository.DetalleVentaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,6 +84,10 @@ public class DetalleVentaService {
         }else{
             return null;
         }
+    }
+
+    public List<DetalleVenta> getDetallesByEmpleadoAndCliente(int id_empleado, int id_cliente) {
+        return detalleVentaRepository.findDetallesByEmpleadoAndCliente(id_empleado, id_cliente);
     }
 
 }
