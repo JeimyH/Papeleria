@@ -75,8 +75,11 @@ http://localhost:8080/api/Empleado/guardar
 Body
 {
 "nombre": "Andres",
+
 "cargo": "Vendedor",
+
 "telefono": "3118165633"
+
 }
 
 Ruta de la petición tabla Producto
@@ -85,13 +88,19 @@ http://localhost:8080/api/Producto/guardar
 Body
 {   
 "nombre": "Borradores",
+
 "descripcion": "Borrador de nata, paquete de 5 unidades",
+
 "precio": 50000,
+
 "stock": 3000,
+
 //Reemplaza con el ID del proveedor existente, para que se establezca la relación con la tabla Proveedor, aqui se debe incluir un objeto que contenga el id_proveedor del proveedor existente para poder manejer la relación entre las tablas.
+
 "proveedor": {
 "id_proveedor": 4 
 }
+
 }
 
 PUT
