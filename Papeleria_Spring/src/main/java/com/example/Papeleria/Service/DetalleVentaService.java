@@ -86,8 +86,9 @@ public class DetalleVentaService {
         }
     }
 
-    public List<DetalleVenta> getDetallesByEmpleadoAndCliente(int id_empleado, int id_cliente) {
-        return detalleVentaRepository.findDetallesByEmpleadoAndCliente(id_empleado, id_cliente);
+    // Consulta nativa: Detalles de venta por empleado y cliente
+    public List<DetalleVenta> obtenerDetallesVentaPorEmpleadoYCliente(Long idEmpleado, Long idCliente) {
+        return detalleVentaRepository.findDetallesByEmpleadoAndCliente(idEmpleado, idCliente);
     }
 
 }

@@ -72,9 +72,13 @@ public class DetalleVentaController {
         }
     }
 
-    @GetMapping("/empleado/{id_empleado}/cliente/{id_cliente}")
-    public List<DetalleVenta> getDetallesByEmpleadoAndCliente(@PathVariable int id_empleado, @PathVariable int id_cliente) {
-        return detalleVentaService.getDetallesByEmpleadoAndCliente(id_empleado, id_cliente);
+    // Endpoint para obtener detalles de venta por empleado y cliente
+    @GetMapping("/empleado/{idEmpleado}/cliente/{idCliente}")
+    public List<DetalleVenta> obtenerDetallesVentaPorEmpleadoYCliente(
+            @PathVariable Long idEmpleado,
+            @PathVariable Long idCliente
+    ) {
+        return detalleVentaService.obtenerDetallesVentaPorEmpleadoYCliente(idEmpleado, idCliente);
     }
 
 }

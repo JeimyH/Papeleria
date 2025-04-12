@@ -92,8 +92,9 @@ public class ProductoService {
         }
     }
 
-    public List<Producto> getProductosByProveedor(int id_proveedor) {
-        return productoRepository.findProductosByProveedor(id_proveedor);
+    // Consulta nativa: Productos por proveedor
+    public List<Producto> obtenerProductosPorProveedor(Long idProveedor) {
+        return productoRepository.findProductosByProveedor(idProveedor);
     }
 
 }

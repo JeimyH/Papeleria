@@ -47,7 +47,8 @@ public class VentaService {
             if(venta==null){
                 throw new IllegalArgumentException("La venta no puede ser nulo");
 
-            }else{
+            }
+            else{
                 if (venta.getFecha() == null) {
                     throw new IllegalArgumentException("La fecha de la venta es obligatorio.");
                 }
@@ -83,12 +84,14 @@ public class VentaService {
         }
     }
 
-    public List<Venta> getVentasByEmpleado(int id_empleado) {
-        return ventaRepository.findVentasByEmpleado(id_empleado);
+    // Consulta nativa: Ventas por empleado
+    public List<Venta> obtenerVentasPorEmpleado(Long idEmpleado) {
+        return ventaRepository.findVentasByEmpleado(idEmpleado);
     }
 
-    public List<Venta> getVentasByEmpleadoAndCliente(int id_empleado, int id_cliente) {
-        return ventaRepository.findVentasByEmpleadoAndCliente(id_empleado, id_cliente);
+    // Consulta nativa: Ventas por empleado y cliente
+    public List<Venta> obtenerVentasPorEmpleadoYCliente(Long idEmpleado, Long idCliente) {
+        return ventaRepository.findVentasByEmpleadoAndCliente(idEmpleado, idCliente);
     }
 
 }

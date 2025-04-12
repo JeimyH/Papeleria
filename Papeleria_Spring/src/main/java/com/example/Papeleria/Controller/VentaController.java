@@ -72,13 +72,18 @@ public class VentaController {
         }
     }
 
-    @GetMapping("/empleado/{id_empleado}")
-    public List<Venta> getVentasByEmpleado(@PathVariable int idEmpleado) {
-        return ventaService.getVentasByEmpleado(idEmpleado);
+    // Endpoint para obtener ventas por empleado
+    @GetMapping("/empleado/{idEmpleado}")
+    public List<Venta> obtenerVentasPorEmpleado(@PathVariable Long idEmpleado) {
+        return ventaService.obtenerVentasPorEmpleado(idEmpleado);
     }
 
-    @GetMapping("/empleado/{id_empleado}/cliente/{id_cliente}")
-    public List<Venta> getVentasByEmpleadoAndCliente(@PathVariable int id_empleado, @PathVariable int id_cliente) {
-        return ventaService.getVentasByEmpleadoAndCliente(id_empleado, id_cliente);
+    // Endpoint para obtener ventas por empleado y cliente
+    @GetMapping("/empleado/{idEmpleado}/cliente/{idCliente}")
+    public List<Venta> obtenerVentasPorEmpleadoYCliente(
+            @PathVariable Long idEmpleado,
+            @PathVariable Long idCliente
+    ) {
+        return ventaService.obtenerVentasPorEmpleadoYCliente(idEmpleado, idCliente);
     }
 }

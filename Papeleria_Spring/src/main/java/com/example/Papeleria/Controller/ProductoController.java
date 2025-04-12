@@ -72,8 +72,9 @@ public class ProductoController {
         }
     }
 
-    @GetMapping("/proveedor/{id_proveedor}")
-    public List<Producto> getProductosByProveedor(@PathVariable int id_proveedor) {
-        return productoService.getProductosByProveedor(id_proveedor);
+    // Endpoint para obtener productos por proveedor
+    @GetMapping("/proveedor/{idProveedor}")
+    public List<Producto> obtenerProductosPorProveedor(@PathVariable Long idProveedor) {
+        return productoService.obtenerProductosPorProveedor(idProveedor);
     }
 }

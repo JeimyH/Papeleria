@@ -32,7 +32,7 @@ public class Producto {
     private int stock;
 
     //@Column(name = "ID_Proveedor", nullable = false, length = 20)
-    //private int id_proveedor;
+    //
 
     @ManyToOne
     @JoinColumn(name="id_proveedor", nullable = false)

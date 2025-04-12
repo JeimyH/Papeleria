@@ -60,7 +60,7 @@ public class ProveedorController {
         }
     }
 
-    @PutMapping("/actualizar/{id_prveedor}")
+    @PutMapping("/actualizar/{id_proveedor}")
     public ResponseEntity<Proveedor> actualizarProveedor(@PathVariable long id_proveedor, @RequestBody Proveedor proveedorActualizado){
         try {
             Proveedor proveedor = proveedorService.actualizarProveedor(id_proveedor, proveedorActualizado);

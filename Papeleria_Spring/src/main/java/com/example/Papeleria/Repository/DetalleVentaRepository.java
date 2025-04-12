@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface DetalleVentaRepository extends JpaRepository<DetalleVenta, Long> {
-    @Query(value = "SELECT dv.* FROM detalle_venta dv JOIN venta v ON dv.id_venta = v.id_venta JOIN cliente c ON v.id_cliente = c.id_cliente WHERE v.id_empleado = :idEmpleado AND c.id_cliente = :idCliente", nativeQuery = true)
-    List<DetalleVenta> findDetallesByEmpleadoAndCliente(@Param("idEmpleado") int idEmpleado, @Param("idCliente") int idCliente);
+    @Query(value = "SELECT dv.* FROM Detalle_Venta dv JOIN Ventas v ON dv.id_venta = v.id_venta JOIN Cliente c ON v.id_cliente = c.id_cliente WHERE v.id_empleado = :idEmpleado AND c.id_cliente = :idCliente", nativeQuery = true)
+    List<DetalleVenta> findDetallesByEmpleadoAndCliente(@Param("idEmpleado") long idEmpleado, @Param("idCliente") long idCliente);
 }
